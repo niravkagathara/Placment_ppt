@@ -1,0 +1,33 @@
+1.
+db.employee.aggregate([{'$group':{_id:"$CITY"}}])
+db.employee.aggregate([{$group:{_id:"$CITY"}}])
+
+2.
+db.employee.aggregate([{$group:{_id:"$CITY",EMP:{$sum:1}}}])
+
+3.
+db.employee.aggregate([{$group:{_id:null, SAlary:{$sum:'$SALARY'}}}])
+4.
+db.employee.aggregate([{$group:{_id:null,AVG:{$avg:'$SALARY'}}}])
+5.
+db.employee.aggregate([{$group:{_id:null,MAX:{$max:'$SALARY'},MIN:{$min:'$SALARY'}}}])
+6.
+db.employee.aggregate([{$group:{_id:'$CITY',TOTALSALARY:{$sum:'$SALARY'}}}])	
+7.
+db.employee.aggregate([{$group:{_id:"$GENDER",MAX:{$max:'$SALARY'},MIN:{$min:'$SALARY'}}}])
+8.
+db.employee.aggregate([{$group:{_id:'$CITY',MAX:{$max:'$SALARY'},MIN:{$min:'$SALARY'}}}])
+9.
+db.employee.aggregate([{$match: {CITY: 'Sydney'}},{$group:{_id:"$CITY",PERSON:{$sum:1}}}])
+10.
+db.employee.aggregate([{$match: {CITY: 'New York'}},{$group:{_id:"$CITY",AVG:{$avg:'$SALARY'}}}])
+11.
+db.student.aggregate([{$group:{_id:'$DEPARTMENT'}}])
+12.
+db.student.aggregate({$group:{_id :'SCITY',STUno:{$sum: 1}}})
+13.
+db.student.aggregate([{$group: {_id: '$CITY',NO:{$sum: 1}}}])
+14.
+db.student.aggregate([{$group: {_id:null,avgFEE:{$avg:'$FEES'}}}])
+15.
+

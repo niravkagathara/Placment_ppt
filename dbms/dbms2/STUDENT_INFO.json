@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5cdc"
+  },
+  "ROLLNO": 101,
+  "SNAME": "Vina",
+  "DEPARTMENT": "CE",
+  "FEES": 15000,
+  "SEM": 3,
+  "GENDER": "Female",
+  "CITY": "Rajkot"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5cdd"
+  },
+  "ROLLNO": 102,
+  "SNAME": "Krisha",
+  "DEPARTMENT": "EC",
+  "FEES": 8000,
+  "SEM": 5,
+  "GENDER": "Female",
+  "CITY": "Ahmedabad"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5cde"
+  },
+  "ROLLNO": 103,
+  "SNAME": "Priti",
+  "DEPARTMENT": "Civil",
+  "FEES": 12000,
+  "SEM": 7,
+  "GENDER": "Female",
+  "CITY": "Baroda"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5cdf"
+  },
+  "ROLLNO": 104,
+  "SNAME": "Mitul",
+  "DEPARTMENT": "CE",
+  "FEES": 15000,
+  "SEM": 3,
+  "GENDER": "Male",
+  "CITY": "Rajkot"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5ce0"
+  },
+  "ROLLNO": 105,
+  "SNAME": "Keshav",
+  "DEPARTMENT": "CE",
+  "FEES": 15000,
+  "SEM": 3,
+  "GENDER": "Male",
+  "CITY": "Jamnagar"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5ce1"
+  },
+  "ROLLNO": 106,
+  "SNAME": "Zarna",
+  "DEPARTMENT": "Civil",
+  "FEES": 12000,
+  "SEM": 5,
+  "GENDER": "Female",
+  "CITY": "Ahmedabad"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5ce2"
+  },
+  "ROLLNO": 107,
+  "SNAME": "Nima",
+  "DEPARTMENT": "EE",
+  "FEES": 9000,
+  "SEM": 5,
+  "GENDER": "Female",
+  "CITY": "Rajkot"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5ce3"
+  },
+  "ROLLNO": 108,
+  "SNAME": "Dhruv",
+  "DEPARTMENT": "Mechanical",
+  "FEES": 10000,
+  "SEM": 5,
+  "GENDER": "Male",
+  "CITY": "Rajkot"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5ce4"
+  },
+  "ROLLNO": 109,
+  "SNAME": "Krish",
+  "DEPARTMENT": "Mechanical",
+  "FEES": 10000,
+  "SEM": 7,
+  "GENDER": "Male",
+  "CITY": "Baroda"
+},
+{
+  "_id": {
+    "$oid": "64e57ae9241552f62b2d5ce5"
+  },
+  "ROLLNO": 110,
+  "SNAME": "Zeel",
+  "DEPARTMENT": "EE",
+  "FEES": 9000,
+  "SEM": 3,
+  "GENDER": "Female",
+  "CITY": "Jamnagar"
+}]

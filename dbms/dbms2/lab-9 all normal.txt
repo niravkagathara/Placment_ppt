@@ -1,0 +1,169 @@
+lab 9 all normal 
+part a
+
+1. 
+db.employee.find({GENDER:"Male"})
+
+2.
+db.employee.find({CITY:"London"})
+3.
+db.employee.find({SALARY:{$gt:3500}})
+4.
+db.employee.find({SALARY:{JOININGDATE:{$lt:ISODATE("15-01-01")}}})
+
+or 
+db.employee.find({JOININGDATE:{$lt:"2015-01-01"}}) 
+
+5.
+db.employee.find({EID:{$gte:7}})
+6.
+db.employee.find({CITY:{$in:["London","New York"]}})
+7.
+db.employee.find({CITY:{$nin:["London","New York"]}})
+8.
+db.employee.find({CITY:"London"},{EID:1})
+9.
+db.employee.find({CITY:"New York"},{ENAME:1}).limit(2)
+10.
+db.employee.find({CITY:"New York",{ENAME:1}).limit(2).skip(2)
+11.
+db.employee.find({GENDER:"Male"},{CITY:"Sydney"})
+12
+db.employee.find({
+  $or: [
+    { CITY: "London" },
+    { CITY: "Sydney" }
+  ]
+}, {
+  EID: 1,
+  ENAME: 1,
+  CITY: 1,
+  SALARY: 1,
+  _id: 0,
+})
+
+13
+db.employee.find({
+  SALARY: { $gt: 7000 }
+}, {
+  ENAME: 1,
+  SALARY: 1,
+  CITY: 1,
+  _id: 0,
+})
+
+14) db.employee.find({ENAME:/^E/})
+
+15) db.employee.find({ENAME:/^[S,M]/})
+
+16) db.employee.find({CITY:/^[A-M]/})
+
+17) db.employee.find({CITY:/ney$/})
+
+18) db.employee.find({ENAME:/[N,n]/})
+
+19) db.employee.find({ENAME:/^E.{4}/})
+
+20) db.employee.find({ENAME:/^S.*a$/})
+
+21) db.employee.find({ENAME:/^Phi/},{EID:1,ENAME:1,CITY:1,SALARY:1})
+
+22) db.employee.find({CITY:/dne/},{ENAME:1,JOININGDATE:1,CITY:1})
+
+
+23
+db.employee.find({
+  CITY: { $nin: ["London", "Sydney"] }
+}, {
+  ENAME: 1,
+  JOININGDATE: 1,
+  CITY: 1,
+  _id: 0
+})
+
+24
+db.employee.deleteMany({
+  CITY: "New York"
+})
+
+25
+db.employee.updateMany(
+  { ENAME: "Nick" },
+  {
+    $set: {
+      ENAME: "Naysa",
+      GENDER: "Female",
+    }
+  }
+)
+ part b
+
+collaction name student
+
+26.
+db.student.find({GENDER :'Female'})
+
+27.
+db.student.find({CITY: 'Rajkot'})
+
+28.
+db.student.find({SEM: 7})
+29.
+db.student.find({SEM: {$nin:[3]}})
+30.
+db.student.find({ROLLNO: {$gt:107}})
+31.
+db.student.find({CITY: {$in:['Jamnagar','Baroda']}})
+32.
+db.student.find({FEES: {$lt: 9000}})
+33.
+db.student.find({DEPARTMENT: 'Mechanical'})
+34.
+db.student.find({CITY: 'Baroda'},{SNAME: 1,_id: 0})
+35.
+db.student.find({$and:[{SEM: 3},{GENDER: 'Male'}]},{SNAME: 1,_id: 0})
+36.
+db.student.find({ROLLNO :{$lt: 105}},{SNAME: 1,CITY:1,FEES:1,_id: 0})
+37.
+db.student.find({SNAME : /^k/i})
+38.
+db.student.find({SNAME : /^[z,d]/i})
+39.
+db.student.find({CITY : /^[a-r]/i})
+40.
+db.student.find({$and:[{SNAME : /^P/},{SNAME : /i$/}]})
+
+db.student.find({SNAME : /^P.*i$/i})
+41.
+db.student.find({DEPARTMENT : /^C/i})
+42.
+db.student.find({CITY : /med/i},{SNAME: 1,SEM: 1,FEES: 1,DEPARTMENT: 1,_id:0})
+43.
+db.student.find({CITY : {$nin:['Rajkot','Baroda']}},{SNAME: 1,SEM: 1,FEES: 1,DEPARTMENT: 1,_id:0})
+44.
+db.student.deleteMany({CITY: 'Jamnagar'})
+45.
+db.student.updateOne({SNAME:'Krish'},{$set:{SNAME: 'Fenny',GENDER: 'Female'}})
+
+lab c
+46.
+db.student.find({CITY: 'Ahmedabad'},{SNAME:1,_id:0}).limit(2).skip(2)
+
+47.
+db.student.find({$or:[{CITY: 'Baroda'},{DEPARTMENT: 'CE'}]},{SNAME:1,ROLLNO:1,FEES:1,DEPARTMENT:1,_id:0})
+48.
+db.student.find({CITY: /oda$/i})
+49.
+db.student.find({$and:[{SNAME: /v/},{SNAME: /V/}]})
+50.
+db.student.find({SNAME: /^v.{3}$/i})
+
+
+
+
+
+
+
+
+
+

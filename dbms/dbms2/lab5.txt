@@ -1,0 +1,58 @@
+([{ACTNO:"102",CNAME:"SUNIL",BNAME:"AJNI",AMOUNT:5000.00,ADATE:"4-1-96"},
+  {ACTNO:"103",CN
+AME:"MEHUL",BNAME:"KAROLBAGH",AMOUNT:3500.00,ADATE:"17-11-95"},
+  {ACTNO:"104",CNAME:"MADHURI",BNAME:"CHANDI",AMOUNT:1200.00,ADATE:"17-12-95"},
+  {ACTNO:"105",CNAME:"PRMOD",BNAME:"M.G. ROAD",AMOUNT:3000.00,ADATE:"27-3-96"},
+  {ACTNO:"106",CNAME:"SANDIP",BNAME:"ANDHERI",AMOUNT:2000.00,ADATE:"31-3-96"},
+  {ACTNO:"107",CNAME:"SHIVANI",BNAME:"VIRAR",AMOUNT:1000.00,ADATE:"5-9-95"},
+  {ACTNO:"108",CNAME:"KRANTI",BNAME:"NEHRU PLACE",AMOUNT:5000.00,ADATE:"2-7-95"},
+])
+
+ 
+
+  
+--1
+db.Deposit.find()
+--2
+
+db.Deposit.find().preety()
+
+--3
+
+db.Deposit.findone()
+--4
+109 KIRTI VIRAR 3000.00 3-5-97
+
+db.Deposit.indsertone({ACTNO:"109",CNAME:"KIRIT",BNAME:"VIRAR",AMOUNT:3000.00,ADATE:"3-5-97"})
+
+--5
+110 MITALI ANDHERI 4500.00 4-9-95
+111 RAJIV NEHRU PLACE 7000.00 2-10-98
+
+db.Deposit.insertmany([
+{ACTNO:"110",CNAME:"MITALI",BNAME:"ANDHGERI",AMOUNT:4500.00,ADATE:"4-9-95"},
+{ACTNO:"111",CNAME:"RAJIV",BNAME:"NEHRU PLACE",AMOUNT:7000.00,ADATE:"2-10-98"}
+])
+
+
+--6
+db.deposite.find({},{CNAME:1,BNAME:1,AMOUNT:1})
+--7
+db.deposite.find().sort({CNAME:1})
+--8
+db.deposite.find().sort({ACTNO:1,AMOUNT:-1})
+--9
+db.deposite.find().limit(2)
+--10
+db.deposite.find().skip(2)
+--11
+db.deposite.find().skip(2).limit(1)
+--12
+db.deposite.find().skip(5).limit(2)
+--13
+db.deposite.find().count()
+
+--14
+db.Deposit.drop()
+--15
+db.dropdatabase()
